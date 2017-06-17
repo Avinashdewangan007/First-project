@@ -1,0 +1,9 @@
+{% extends 'html/base.html' %}
+
+{% block head %}{{ block.super }}->logout{% endblock head %}
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3">
+         <h3>Yor are logged out please provide to
+             <a href="html/login.html">login</a></h3>
+    </div>
+{% endblock content %}

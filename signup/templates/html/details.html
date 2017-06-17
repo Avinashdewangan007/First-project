@@ -1,0 +1,16 @@
+{% extends 'html/base.html' %}
+
+{% block head %}{{ block.super }}->{{ instance.first_name }}{% endblock head %}
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3">
+        <h2>{{ instance.first_name }}  <small>{{ instance.timestamp|timesince }}</small></h2>
+
+        <br>
+        {{ instance.last_name }}<br>
+        {{ instance.date_of_birth }}<br>
+        {{ instance.gender }}<br>
+        {{ instance.email }}<br>
+        {{ instance.password }}<br>
+    </div>
+{% endblock content %}
+

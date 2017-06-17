@@ -1,0 +1,33 @@
+{% extends 'html/base.html' %}
+
+{% block head %}{{ block.super }}->login{% endblock head %}
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>Login</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input type="email" name="email" class="email" placeholder="email address" required>
+            <p></p>
+            <input type="password" name="password" class="password" placeholder="your password" required>
+            <p></p>
+            <div id="msg"></div>
+            <input type="submit" value="Login" class="login">
+        </form>
+        click here to
+        <a href="/signup">SignUp</a>
+
+        <script>
+
+            $('.login').click(function () {
+                var email = $('.email').val();
+                var password = $('.password').val();
+
+                if (email!='' && password!='') {
+
+                } else {
+                   $('#msg').html('Fill all the fields');
+                }
+            });
+        </script>
+    </div>
+{% endblock content %}
